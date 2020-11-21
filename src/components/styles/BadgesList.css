@@ -1,0 +1,52 @@
+ul {
+  padding: -1rem;
+}
+
+.BadgeItem {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px #b2b2b2;
+  font-size: 16px;
+}
+
+.BadgeItem__avatar {
+  width: 80px;
+  height: 80px;
+  margin: auto 20px;
+  border-radius: 50%;
+}
+
+.BadgeItem__info {
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.BadgeItem__info > p {
+  margin: 0;
+}
+
+.BadgeItem__info > p:first-child {
+  font-weight: 900;
+}
+
+.BadgeItem__info > p:last-child {
+  font-size: 14px;
+}
+
+.BadgeItem__info > a {
+  text-decoration: none;
+}
+
+.BadgeItem__info > .BadgeItem__info-twitter {
+  display: flex;
+  align-items: center;
+}
+
+.BadgeItem__info-twitter > p {
+  margin: 0;
+}
