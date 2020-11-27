@@ -1,0 +1,53 @@
+.Home {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Description__container {
+  /* width: 50%; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #1b1b25;
+  /* justify-content: center; */
+}
+
+.Description__image {
+  margin-bottom: 20px;
+}
+
+.Description__paragraph {
+  font-size: 18px;
+}
+
+.Description__button {
+  width: 180px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #7dcd40;
+  color: white;
+  border: none;
+  font-weight: 600;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Description__button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.Image__container {
+  width: 50%;
+}
+
+.Image__container > img {
+  width: 100%;
+}

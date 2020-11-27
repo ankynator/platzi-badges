@@ -23,7 +23,7 @@ class BadgeNew extends React.Component {
   handleChange = e => {
     this.setState({
       form:{
-        ... this.state.form,
+        ...this.state.form,
         [e.target.name]: e.target.value
       }
     })
@@ -32,7 +32,6 @@ class BadgeNew extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
         <div className="BadgeNew__hero">
           <img className="img-fluid" src={header} alt="logo"/>
         </div>

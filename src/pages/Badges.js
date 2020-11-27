@@ -77,7 +77,6 @@ class Badges extends React.Component{
     console.log("2. render()")
     return (
       <React.Fragment>
-        <Navbar />
         <div className="Badges">
           <div className="Badges__hero">
             <div className="Badges__container">
