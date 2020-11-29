@@ -24,8 +24,8 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
-      // return callApi('/badges');
-      throw new Error('500: Vander Error')
+      return callApi('/badges');
+      // throw new Error('500: Vander Error')
     },
     create(badge) {
       return callApi(`/badges`, {
