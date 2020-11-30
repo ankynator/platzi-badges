@@ -5,7 +5,30 @@ import twitterIcon from '../images/twitter-icon.svg'
 import Gravatar from '../components/Gravatar'
 import './styles/BadgesList.css'
 
+class BadgeListItem extends React.Component {
+  render() {
+    return(
+      <div className="BadgeItem">
+        <Gravatar 
+          className="BadgeItem__avatar" 
+          email={this.props.badge.email} 
+        />
+        <div className="BadgeItem__info">
+          <p>{this.props.badge.firstName} {this.props.badge.lastName}</p>
+          <a href='/' className="BadgeItem__info-twitter">
+            <img src={twitterIcon} alt="logo twitter" width='20px'/>
+            <p>@{this.props.badge.twitter}</p>
+          </a>
+          <p>{this.props.badge.jobTitle}</p>
+        </div>
+      </div>
+    )
+  }
+}
+
 class BadgesList extends React.Component {
+  badgeList = [...this.props.badges].reverse()
+
   render() {
     if(this.props.badges.length === 0) {
       return (
@@ -20,23 +43,12 @@ class BadgesList extends React.Component {
 
     return (
       <ul className="list-unstyled">
-        {this.props.badges.map((badge) => {
-        return (
-          <li key={badge.id} className="BadgeItem">
-            <Gravatar 
-              className="BadgeItem__avatar" 
-              email={badge.email} 
-            />
-            <div className="BadgeItem__info">
-              <p>{badge.firstName} {badge.lastName}</p>
-              <a href='/' className="BadgeItem__info-twitter">
-                <img src={twitterIcon} alt="logo twitter" width='20px'/>
-                <p>@{badge.twitter}</p>
-              </a>
-              <p>{badge.jobTitle}</p>
-            </div>
-          </li>
-        )
+        {this.badgeList.map((badge) => {
+          return (
+            <li key={badge.id}>
+              <BadgeListItem badge={badge}/>
+            </li>
+          )
         })}
       </ul>  
     )
