@@ -38,8 +38,9 @@ ul {
   font-size: 14px;
 }
 
-.BadgeItem__info > a {
+.BadgeItem__info > span {
   text-decoration: none;
+  color: #1da1f2;
 }
 
 .BadgeItem__info > .BadgeItem__info-twitter {

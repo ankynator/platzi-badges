@@ -15,10 +15,10 @@ class BadgeListItem extends React.Component {
         />
         <div className="BadgeItem__info">
           <p>{this.props.badge.firstName} {this.props.badge.lastName}</p>
-          <a href='/' className="BadgeItem__info-twitter">
+          <span href='/' className="BadgeItem__info-twitter">
             <img src={twitterIcon} alt="logo twitter" width='20px'/>
             <p>@{this.props.badge.twitter}</p>
-          </a>
+          </span>
           <p>{this.props.badge.jobTitle}</p>
         </div>
       </div>
@@ -46,7 +46,9 @@ class BadgesList extends React.Component {
         {this.badgeList.map((badge) => {
           return (
             <li key={badge.id}>
-              <BadgeListItem badge={badge}/>
+              <Link className="text-reset text-decoration-none" to={`/badges/${badge.id}/edit`}>
+                <BadgeListItem badge={badge}/>
+              </Link>
             </li>
           )
         })}
