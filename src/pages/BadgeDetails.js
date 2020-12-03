@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 
 import Badge from '../components/Badge'
@@ -10,7 +11,7 @@ import './styles/BadgeDetails.css'
 function BadgeDetails (props) {
   const badge = props.badge
   return (
-    <div>
+    <React.Fragment>
         <div className="BadgeDetails__hero">
         <div className="container">
           <div className="row">
@@ -48,13 +49,14 @@ function BadgeDetails (props) {
                 </div>
                 <div>
                   <button className="btn btn-danger">Delete</button>
+                  {ReactDOM.createPortal(<h1>Hola realmente no estoy aqui</h1>, document.getElementById('modal'))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       
-      </div>
+      </React.Fragment>
   )
 }
 
